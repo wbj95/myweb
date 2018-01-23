@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Login Page 2 | Creative - Bootstrap 3 Responsive Admin Template</title>
+
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body class="login-img3-body">
+    <div class="container">
+      <form class="login-form" action="RegisterServlet" method="post" onsubmit="return checkform();">
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            
+            
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <input type="text" id="user_name"  name="user_name" class="form-control" placeholder="用户名" autofocus>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" id="user_password" name="user_password" class="form-control" placeholder="密码">
+            </div>
+            
+            
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <input type="text" id="user_cname" name="user_cname" class="form-control" placeholder="中文名" autofocus>
+            </div>
+            
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <input type="text" id="user_phone" name="user_phone" class="form-control" placeholder="电话" autofocus>
+            </div>
+             
+            
+            <button class="btn btn-primary btn-lg btn-block" type="submit">注册</button>
+            <a href="../index.jsp"  class="btn btn-default btn-lg btn-block" >返回订餐界面</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+  	function checkform(){
+  		//alert("ss");
+  		var username = document.getElementById("user_name").value;
+  		var userpassword = document.getElementById("user_password").value;
+  		var usercname = document.getElementById("user_cname").value;
+  		var userphone = document.getElementById("user_phone").value;
+  		if(username==""||userpassword==""||usercname==""||userphone==""){
+  			alert("有栏目为空，请重新输入");
+  			//document.getElementById("user_name").focus();
+  			return false;
+  		}
+  		return true;
+  	}
+  </script>
+</html>
